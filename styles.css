@@ -512,12 +512,26 @@ footer .names {
   font-size: 14px;
   line-height: 1.45;
 }
-.host-row > span:first-child {
+.host-response {
   min-width: 0;
   overflow-wrap: anywhere;
   text-align: right;
 }
-.host-row > span:last-child {
+.host-name,
+.host-note {
+  display: block;
+}
+.host-name {
+  color: var(--ink);
+  font-weight: 700;
+}
+.host-note {
+  color: #75684f;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 2px;
+}
+.host-status {
   color: var(--ink);
   text-align: left;
   white-space: nowrap;
@@ -533,7 +547,7 @@ footer .names {
     gap: 10px;
     font-size: 13px;
   }
-  .host-row > span:last-child {
+  .host-status {
     white-space: normal;
   }
 }

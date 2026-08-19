@@ -213,7 +213,7 @@ async function loadHostPanel() {
             : e.transport === "bus"
               ? "אוטובוס"
               : "עצמאית";
-          return `<div class="host-row"><span>${e.name}${e.note ? " - " + e.note : ""}</span><span>${e.attending ? e.guests + " אורחים · " + way : way}</span></div>`;
+          return `<div class="host-row"><span class="host-response"><strong class="host-name">${e.name}</strong>${e.note ? `<span class="host-note">${e.note}</span>` : ""}</span><span class="host-status">${e.attending ? e.guests + " אורחים · " + way : way}</span></div>`;
         })
         .join("") ||
       '<div class="host-row"><span>עדיין אין תשובות</span></div>';
