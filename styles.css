@@ -479,29 +479,63 @@ footer .names {
 .host-panel {
   max-width: 640px;
   margin: 12px auto 0;
-  padding: 18px 20px;
+  padding: 18px 18px 8px;
   background: var(--stone);
-  border-radius: 6px;
+  border: 1px solid var(--stone-deep);
+  border-radius: 2px;
   display: none;
 }
 .host-panel.show {
   display: block;
 }
 .host-panel h4 {
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   color: var(--wine);
+  font-size: 18px;
+  text-align: right;
 }
 .host-panel .summary {
-  font-size: 15px;
-  margin-bottom: 14px;
-  font-weight: 600;
+  padding-bottom: 10px;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.7;
+  text-align: right;
 }
 .host-row {
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  padding: 6px 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(116px, 32%);
+  gap: 14px;
+  align-items: start;
+  min-height: 38px;
+  padding: 7px 0;
   border-bottom: 1px solid var(--stone-deep);
+  font-size: 14px;
+  line-height: 1.45;
+}
+.host-row > span:first-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  text-align: right;
+}
+.host-row > span:last-child {
+  color: var(--ink);
+  text-align: left;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .host-panel {
+    margin-inline: 12px;
+    padding-inline: 14px;
+  }
+  .host-row {
+    grid-template-columns: minmax(0, 1fr) 104px;
+    gap: 10px;
+    font-size: 13px;
+  }
+  .host-row > span:last-child {
+    white-space: normal;
+  }
 }
 .hidden-trigger {
   display: block;
