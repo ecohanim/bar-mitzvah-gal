@@ -14,7 +14,7 @@ for (let i = 0; i < 22; i++) {
   sparkHost.appendChild(s);
 }
 
-const BUS_CAPACITY = 40;
+const BUS_CAPACITY = 50;
 let attending = null;
 let transport = null;
 
